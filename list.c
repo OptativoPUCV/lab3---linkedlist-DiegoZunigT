@@ -119,6 +119,7 @@ void * popCurrent(List * list)
   void* popt;
   if(list->current) {
     popt = list->current->data;
+    return popt;
     if(list->current->prev && list->current->next) {
       list->current = list->current->prev;
       list->current->next = list->current->next->next;
@@ -128,7 +129,7 @@ void * popCurrent(List * list)
       list->head = list->current;
     }
   }
-  return popt;
+  
 }
 
 void cleanList(List * list) {

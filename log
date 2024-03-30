@@ -234,3 +234,14 @@ list.c:131:10: error: ‘popt’ may be used uninitialized in this function [-We
 cc1: all warnings being treated as errors
 Compilation failed
 656b9c4
+Sat 30 Mar 2024 02:10:47 AM UTC: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:133:1: error: control reaches end of non-void function [-Werror=return-type]
+  133 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+2ab82fe
