@@ -270,3 +270,14 @@ list.c:133:1: error: control reaches end of non-void function [-Werror=return-ty
 cc1: all warnings being treated as errors
 Compilation failed
 54d4c26
+Sat 30 Mar 2024 02:11:54 AM UTC: 
+ list.c | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:131:10: error: ‘popt’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+  131 |   return popt;
+      |          ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8186a61
