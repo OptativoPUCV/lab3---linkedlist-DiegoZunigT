@@ -84,3 +84,14 @@ Sat 30 Mar 2024 01:08:21 AM UTC:
  1 file changed, 4 insertions(+), 1 deletion(-)
  tests:  0|0
 76664ef
+Sat 30 Mar 2024 01:08:51 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:51:25: error: ‘list->current->next’ is a pointer; did you mean to use ‘->’?
+   51 |   if(list->current->next.data != NULL) {
+      |                         ^
+      |                         ->
+Compilation failed
+4f2a379
