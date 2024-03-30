@@ -117,20 +117,18 @@ void * popBack(List * list) {
 void * popCurrent(List * list) 
 {
   void* popt = list->current->data;
-  if(list->current) {
-    if(list->current->prev && list->current->next) {
-      list->current = list->current->prev;
-      list->current->next = list->current->next->next;
-      list->current->next->prev = list->current;
-    } else if(list->current == list->head) {
-      list->current = list->current->next;
-      list->current->prev = NULL;
-      list->head = list->current;
-    } else if(list->current == list->tail) {
-      list->current = list->current->prev;
-      list->current->next = NULL;
-      list->tail = list->current;
-    }
+  if(list->head == list->current) {
+    list->current = list->current->next;
+    list->current->prev = NULL;
+    list->head = list->current;  
+  } else if(list-> tail == list->current) {
+    list->current = list->current->prev;
+    list->current->next = NULL;
+    list->tail = list->current;    
+  } else /*if(list->current->prev && list->current->next)*/ {
+    list->current = list->current->prev;
+    list->current->next = list->current->next->next;
+    list->current->next->prev = list->current;
   }
   return popt;
 }
