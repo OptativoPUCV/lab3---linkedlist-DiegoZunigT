@@ -120,6 +120,10 @@ void * popCurrent(List * list)
     if(list->current->prev && list->current->next) {
       list->current = list->current->prev;
       list->current->next = list->current->next->next;
+    } else if(list->current == list->head) {
+      list->current = list->current->next;
+      list->current->prev = NULL;
+      list->head = list->current;
     }
   }
   return list->current->data;
