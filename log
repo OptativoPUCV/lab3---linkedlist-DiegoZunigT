@@ -95,3 +95,8 @@ list.c:51:25: error: ‘list->current->next’ is a pointer; did you mean to use
       |                         ->
 Compilation failed
 4f2a379
+Sat 30 Mar 2024 01:08:56 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+cb57822
