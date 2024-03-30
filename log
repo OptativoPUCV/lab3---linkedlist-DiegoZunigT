@@ -223,3 +223,14 @@ Sat 30 Mar 2024 02:07:57 AM UTC:
  tests:  11|1
 total_score: 55/70
 eeb2537
+Sat 30 Mar 2024 02:09:38 AM UTC: 
+ list.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:131:10: error: ‘popt’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+  131 |   return popt;
+      |          ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+656b9c4
